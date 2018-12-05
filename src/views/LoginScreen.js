@@ -22,7 +22,7 @@ class LoginScreen extends React.Component {
     e.preventDefault();
     const { email, password } = this.state;
     this.props.dispatch(
-      signin({ email, password }, () => this.props.history.push("/feed"))
+      signin({ email, password }, () => this.props.history.push("/home"))
     );
   };
 

@@ -8,13 +8,19 @@ import store from "./config/store";
 import AppLayout from "./components/AppLayout";
 import LoginScreen from "./views/LoginScreen";
 import RegisterScreen from "./views/RegisterScreen";
+import HomeScreen from "./views/HomeScreen";
+import DetailsScreen from "./views/DetailsScreen";
+import RentScreen from "./views/RentScreen";
 
 ReactDOM.render(
   <Provider store={store}>
     <Router>
       <AppLayout>
         <Route exact path="/" component={LoginScreen} />
-        <Route path="/register" component={RegisterScreen} />
+        <Route exact path="/register" component={RegisterScreen} />
+        <Route exact path="/home" component={HomeScreen} />
+        <Route exact path="/rents" component={RentScreen} />
+        <Route exact path="/details" component={DetailsScreen} />
       </AppLayout>
     </Router>
   </Provider>,
