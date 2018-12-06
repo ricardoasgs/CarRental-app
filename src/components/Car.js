@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
-import { selectCar } from "../actions/detailAction";
+import { selectCar, finalizeRent } from "../actions/detailAction";
 
 class Car extends Component {
   detailCar = car => {
@@ -11,16 +11,35 @@ class Car extends Component {
     );
   };
 
+  finalizeRent = id => {
+    this.props.dispatch(finalizeRent(id));
+  };
+
   render() {
-    return this.props.car ? (
+    return this.props.car || this.props.rent ? (
       <Card>
         <CardImage />
-        <CardContent>
-          <CardTitle>{this.props.car.model || ""}</CardTitle>
-          <CardButton onClick={() => this.detailCar(this.props.car)}>
-            VER MAIS DETALHES
-          </CardButton>
-        </CardContent>
+        {this.props.car ? (
+          <CardContent>
+            <CardTitle>{this.props.car.model || ""}</CardTitle>
+            <CardButton onClick={() => this.detailCar(this.props.car)}>
+              VER MAIS DETALHES
+            </CardButton>
+          </CardContent>
+        ) : (
+          <CardContent>
+            <CardTitle>{this.props.rent.car.model || ""}</CardTitle>
+            {this.props.rent.active ? (
+              <CardButton
+                onClick={() => this.finalizeRent(this.props.rent._id)}
+              >
+                Realizar Devolução
+              </CardButton>
+            ) : (
+              <CardButton disabled="True">Devolvido</CardButton>
+            )}
+          </CardContent>
+        )}
       </Card>
     ) : null;
   }
@@ -37,7 +56,7 @@ const Card = styled.div`
   flex-direction: column;
   overflow: hidden;
   width: 280px;
-  height: 220px;
+  height: 100%;
 `;
 
 const CardContent = styled.div`
@@ -78,6 +97,7 @@ const CardButton = styled.button`
   color: white;
   padding: 0.5rem;
   text-transform: uppercase;
+  align-items: center;
   display: block;
   width: 100%;
 `;

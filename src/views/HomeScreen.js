@@ -12,13 +12,16 @@ class HomeScreen extends React.Component {
   }
 
   render() {
-    console.log(this.props.list);
     return (
       <Container>
         <NavBar />
         <CarContainer>
           {this.props.list.length ? (
-            <CarList list={this.props.list} history={this.props.history} />
+            <CarList
+              list={this.props.list}
+              history={this.props.history}
+              rent={false}
+            />
           ) : (
             <LoadingComponent />
           )}

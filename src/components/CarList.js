@@ -1,17 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Car from "./Car";
-import CarRent from "./CarRent";
 
 export default props => {
   const renderCard = () => {
     const list = props.list || [];
-    return list.map(car => (
-      <CardItem key={car._id}>
-        {props.type === "rent" ? (
-          <CarRent car={car} history={props.history} />
+    return list.map(item => (
+      <CardItem key={item._id}>
+        {props.rent ? (
+          <Car rent={item} history={props.history} />
         ) : (
-          <Car car={car} history={props.history} />
+          <Car car={item} history={props.history} />
         )}
       </CardItem>
     ));
@@ -32,4 +31,5 @@ const CardItem = styled.li`
   display: flex;
   padding: 1rem;
   width: 280px;
+  height: 240px;
 `;

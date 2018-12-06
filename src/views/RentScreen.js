@@ -8,7 +8,7 @@ import NavBar from "../components/NavBar";
 
 class RentScreen extends React.Component {
   componentDidMount() {
-    console.log(localStorage.getItem("userId"));
+    //console.log(localStorage.getItem("userId"));
     this.props.dispatch(getRents(localStorage.getItem("userId")));
   }
 
@@ -21,7 +21,7 @@ class RentScreen extends React.Component {
             <CarList
               list={this.props.rentList}
               history={this.props.history}
-              type="rent"
+              rent={true}
             />
           ) : (
             <LoadingComponent />
@@ -42,7 +42,7 @@ const CarContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: #f8f7ff;
   background-attachment: fixed;
 `;
 

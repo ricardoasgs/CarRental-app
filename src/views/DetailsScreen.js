@@ -50,27 +50,25 @@ class DetailsScreen extends React.Component {
 }
 
 const DetailsContainer = styled.div`
-display: flex
-justify-content: center
-align-items: center
-height: 100%
-min-height: 80vh 
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  min-height: 80vh 
 `;
 
 const Container = styled.div`
   display: flex;
-
   flex-direction: column
   width: 100%;
   background: #fff
-  
 `;
 
 const CarContainer = styled.div`
-display: flex
-justify-content: center
-align-items: center
-flex-direction: column
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
   background-color: #fff;
   border-radius: 5px;
   height: 500px;

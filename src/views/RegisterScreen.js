@@ -2,7 +2,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import LaddaButton, { S, ZOOM_IN } from "react-ladda";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import { signup } from "../actions/loginAction";
 
