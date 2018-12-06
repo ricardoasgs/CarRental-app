@@ -79,25 +79,27 @@ class RegisterScreen extends React.Component {
 }
 
 const RegisterContainer = styled.div`
-  display: flex
-  height: 100vh
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  background-color: gray
+display: flex
+justify-content: center
+align-items: center
+background-color: #F8F7FF
+height: 100vh
+width: 100vw
 `;
 
 const FormContainer = styled.div`
+border-radius: 5px;
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  background-color: white
+  background-color: #B8B8FF
   height: 50vh
   width: 40vw
 `;
 
 const RegisterTitle = styled.h1`
+color: #fff
   text-align: center
   padding-bottom: 15px
   font-size: 35px
@@ -105,6 +107,7 @@ const RegisterTitle = styled.h1`
 `;
 
 const RegisterSubtitle = styled.h6`
+color: #fff
   text-align: center
   padding-bottom: 15px
   font-size: 18px

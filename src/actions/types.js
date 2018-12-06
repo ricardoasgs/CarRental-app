@@ -12,3 +12,4 @@ export const RENT_FETCHED = "RENT_FETCHED";
 //Detail
 export const CAR_SELECTED = "CAR_SELECTED";
 export const RENT_FINALIZED = "RENT_FINALIZED";
+export const RENT_CREATED = "RENT_CREATED";

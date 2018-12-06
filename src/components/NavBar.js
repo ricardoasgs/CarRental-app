@@ -12,27 +12,20 @@ const NavBar = props => (
       <Link to="/rents">
         <NavItem>Meus Alugueis</NavItem>
       </Link>
-      <NavItem>Sobre</NavItem>
     </MainNav>
   </Nav>
 );
 
 const Nav = styled.nav`
   display: flex;
+  color: #9381FF
   flex-direction: row;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border: 1px solid #a2a2a2;
-  background-color: #f4f4f4;
-  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(31, 53, 78, 0.11) 0 1px;
   flex-direction: row;
   justify-content: space-between;
-  height: 7vh;
+  align-items: center;
+  height: 70px;
 `;
 
 const Logo = styled.h1`
@@ -49,7 +42,7 @@ const MainNav = styled.ul`
   flex-direction: row;
   margin-top: 5px;
   list-style: none;
-  color: #34495e;
+  color: #9381ff;
   font-size: 0.99em;
   padding: 10px 15px;
   text-transform: uppercase;

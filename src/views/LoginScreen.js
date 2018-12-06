@@ -11,9 +11,9 @@ class LoginScreen extends React.Component {
     super(props);
 
     this.state = {
-      email: "",
+      email: "ricardoaugustogarcia@hotmail.com",
       emailError: "",
-      password: "",
+      password: "@teste123",
       passwordError: ""
     };
   }
@@ -78,22 +78,24 @@ const SigninContainer = styled.div`
   display: flex
   justify-content: center
   align-items: center
-  background-color: gray
+  background-color: #F8F7FF
   height: 100vh
   width: 100vw
 `;
 
 const FormContainer = styled.div`
+border-radius: 5px;
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  background-color: white
+  background-color: #B8B8FF
   height: 50vh
   width: 40vw
 `;
 
 const SigninTitle = styled.h1`
+  color: #fff
   text-align: center
   padding-bottom: 15px
   font-size: 35px
@@ -101,6 +103,7 @@ const SigninTitle = styled.h1`
 `;
 
 const SigninSubtitle = styled.h6`
+color: #fff
   text-align: center
   padding-bottom: 15px
   font-size: 18px
@@ -108,14 +111,14 @@ const SigninSubtitle = styled.h6`
 `;
 
 const CreateAccountSpan = styled.span`
-  color: #000
+  color: #FFF
   font-weight: 300
   font-size: 12px
   padding-top: 10px
 `;
 
 const CreateAccountText = styled(Link)`
-  color: gray
+  color: #fff
   text-align: center
   padding: 10px 0
   font-size: 13px

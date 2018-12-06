@@ -18,7 +18,7 @@ class Car extends Component {
         <CardContent>
           <CardTitle>{this.props.car.model || ""}</CardTitle>
           <CardButton onClick={() => this.detailCar(this.props.car)}>
-            Ver
+            VER MAIS DETALHES
           </CardButton>
         </CardContent>
       </Card>
@@ -37,7 +37,7 @@ const Card = styled.div`
   flex-direction: column;
   overflow: hidden;
   width: 280px;
-  height: 280px;
+  height: 220px;
 `;
 
 const CardContent = styled.div`
@@ -48,12 +48,13 @@ const CardContent = styled.div`
 `;
 
 const CardTitle = styled.div`
-  color: #696969;
+  color: #3c4859;
   font-size: 1.15rem;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
 `;
 
 const CardImage = styled.div`
@@ -72,11 +73,11 @@ const CardImage = styled.div`
 
 const CardButton = styled.button`
   text-decoration: none;
-  background-color: gray;
-  border: 1px solid #cccccc;
+  background-color: #9381ff;
+  border: 1px solid #9381ff;
   color: white;
   padding: 0.5rem;
-  text-transform: lowercase;
+  text-transform: uppercase;
   display: block;
   width: 100%;
 `;
