@@ -24,7 +24,6 @@ const Container = styled.ul`
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  margin-left: 10px;
 `;
 
 const CardItem = styled.li`

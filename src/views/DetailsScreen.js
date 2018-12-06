@@ -19,32 +19,29 @@ class DetailsScreen extends React.Component {
 
   render() {
     return (
-      <Container>
-        <NavBar />
-        <DetailsContainer>
-          <CarContainer>
-            <Image src={img} />
-            <Description>
-              <Title>{this.props.car.model}</Title>
-              <Info>{this.props.car.year}</Info>
-              <Info>{this.props.car.type}</Info>
-              <Info>{this.props.car.color}</Info>
-              <Info>{this.props.car.price}</Info>
-            </Description>
-            <Footer>
-              {this.props.car.avaliable ? (
-                <RentButton onClick={() => this.rentCar(this.props.car._id)}>
-                  Alugar
-                </RentButton>
-              ) : (
-                <UnavaliableButton disabled="True">
-                  Não Disponível
-                </UnavaliableButton>
-              )}
-            </Footer>
-          </CarContainer>
-        </DetailsContainer>
-      </Container>
+      <DetailsContainer>
+        <CarContainer>
+          <Image src={img} />
+          <Description>
+            <Title>{this.props.car.model}</Title>
+            <Info>{this.props.car.year}</Info>
+            <Info>{this.props.car.type}</Info>
+            <Info>{this.props.car.color}</Info>
+            <Info>{this.props.car.price}</Info>
+          </Description>
+          <Footer>
+            {this.props.car.avaliable ? (
+              <RentButton onClick={() => this.rentCar(this.props.car._id)}>
+                Alugar
+              </RentButton>
+            ) : (
+              <UnavaliableButton disabled="True">
+                Não Disponível
+              </UnavaliableButton>
+            )}
+          </Footer>
+        </CarContainer>
+      </DetailsContainer>
     );
   }
 }
@@ -57,13 +54,6 @@ const DetailsContainer = styled.div`
   min-height: 80vh 
 `;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column
-  width: 100%;
-  background: #fff
-`;
-
 const CarContainer = styled.div`
   display: flex
   justify-content: center
@@ -71,7 +61,7 @@ const CarContainer = styled.div`
   flex-direction: column
   background-color: #fff;
   border-radius: 5px;
-  height: 500px;
+  height: 450px;
   width: 380px;
 `;
 

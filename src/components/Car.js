@@ -87,7 +87,7 @@ const CardImage = styled.div`
   overflow: hidden;
   position: relative;
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-  height: 20vh;
+  height: 150px;
 `;
 
 const CardButton = styled.button`

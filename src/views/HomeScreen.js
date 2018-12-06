@@ -13,37 +13,20 @@ class HomeScreen extends React.Component {
 
   render() {
     return (
-      <Container>
-        <NavBar />
-        <CarContainer>
-          {this.props.list.length ? (
-            <CarList
-              list={this.props.list}
-              history={this.props.history}
-              rent={false}
-            />
-          ) : (
-            <LoadingComponent />
-          )}
-        </CarContainer>
-      </Container>
+      <React.Fragment>
+        {this.props.list.length ? (
+          <CarList
+            list={this.props.list}
+            history={this.props.history}
+            rent={false}
+          />
+        ) : (
+          <LoadingComponent />
+        )}
+      </React.Fragment>
     );
   }
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`;
-
-const CarContainer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: #f8f7ff;
-  background-attachment: fixed;
-`;
 
 const mapStateToProps = state => ({
   list: state.homeReducer.list

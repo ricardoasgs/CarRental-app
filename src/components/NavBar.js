@@ -6,10 +6,10 @@ const NavBar = props => (
   <Nav>
     <Logo>Car Rental</Logo>
     <MainNav>
-      <Link to="/home">
+      <Link to="/home" style={{ textDecoration: "none" }}>
         <NavItem>Home</NavItem>
       </Link>
-      <Link to="/rents">
+      <Link to="/rents" style={{ textDecoration: "none" }}>
         <NavItem>Meus Alugueis</NavItem>
       </Link>
     </MainNav>
@@ -50,7 +50,12 @@ const MainNav = styled.ul`
 `;
 
 const NavItem = styled.li`
-  margin-left: 20px;
+  margin: 0;
+  font-size: 1.25em;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
 `;
 
 export default NavBar;
