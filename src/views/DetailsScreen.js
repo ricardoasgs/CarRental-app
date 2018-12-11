@@ -1,9 +1,9 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import NavBar from "../components/NavBar";
 
 import { createRent } from "../actions/detailAction";
+import AppContainer from "../components/AppContainer";
 
 const img =
   "https://www.rentacarlowcost.pt/wp-content/uploads/2016/09/mitsubishi-space-star-800x400.jpg";
@@ -19,29 +19,31 @@ class DetailsScreen extends React.Component {
 
   render() {
     return (
-      <DetailsContainer>
-        <CarContainer>
-          <Image src={img} />
-          <Description>
-            <Title>{this.props.car.model}</Title>
-            <Info>{this.props.car.year}</Info>
-            <Info>{this.props.car.type}</Info>
-            <Info>{this.props.car.color}</Info>
-            <Info>{this.props.car.price}</Info>
-          </Description>
-          <Footer>
-            {this.props.car.avaliable ? (
-              <RentButton onClick={() => this.rentCar(this.props.car._id)}>
-                Alugar
-              </RentButton>
-            ) : (
-              <UnavaliableButton disabled="True">
-                Não Disponível
-              </UnavaliableButton>
-            )}
-          </Footer>
-        </CarContainer>
-      </DetailsContainer>
+      <AppContainer>
+        <DetailsContainer>
+          <CarContainer>
+            <Image src={img} />
+            <Description>
+              <Title>{this.props.car.model}</Title>
+              <Info>{this.props.car.year}</Info>
+              <Info>{this.props.car.type}</Info>
+              <Info>{this.props.car.color}</Info>
+              <Info>{this.props.car.price}</Info>
+            </Description>
+            <Footer>
+              {this.props.car.avaliable ? (
+                <RentButton onClick={() => this.rentCar(this.props.car._id)}>
+                  Alugar
+                </RentButton>
+              ) : (
+                <UnavaliableButton disabled="True">
+                  Não Disponível
+                </UnavaliableButton>
+              )}
+            </Footer>
+          </CarContainer>
+        </DetailsContainer>
+      </AppContainer>
     );
   }
 }

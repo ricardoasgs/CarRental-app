@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { getRents } from "../actions/homeAction";
 import CarList from "../components/CarList";
 import LoadingComponent from "../components/Loading";
-import NavBar from "../components/NavBar";
+import AppContainer from "../components/AppContainer";
 
 class RentScreen extends React.Component {
   componentDidMount() {
@@ -13,7 +13,7 @@ class RentScreen extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <AppContainer>
         {this.props.rentList.length ? (
           <CarList
             list={this.props.rentList}
@@ -23,7 +23,7 @@ class RentScreen extends React.Component {
         ) : (
           <LoadingComponent />
         )}
-      </React.Fragment>
+      </AppContainer>
     );
   }
 }

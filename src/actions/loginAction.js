@@ -24,7 +24,6 @@ export function signin({ email, password }, callback) {
           type: USER_AUTH_SUCCESS,
           payload: response.data.user
         });
-
         localStorage.setItem("token", response.data.user.token);
         localStorage.setItem("userId", response.data.user._id);
         //console.log(response.data);
@@ -33,7 +32,7 @@ export function signin({ email, password }, callback) {
       .catch(err => {
         dispatch({
           type: USER_AUTH_ERROR,
-          payload: err.response.data.message
+          payload: err
         });
       });
   };

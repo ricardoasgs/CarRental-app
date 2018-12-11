@@ -25,6 +25,7 @@ const Nav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
   height: 70px;
 `;
 

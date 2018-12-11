@@ -12,7 +12,8 @@ const loginInitialState = {
   message: "",
   loading: null,
   emailSent: false,
-  error: ""
+  error: "",
+  login: null
 };
 
 const loginReducer = (state = loginInitialState, action) => {
@@ -21,7 +22,8 @@ const loginReducer = (state = loginInitialState, action) => {
   switch (action.type) {
     case USER_AUTH: {
       Object.assign(newState, state, {
-        loading: action.payload
+        loading: action.payload,
+        login: false
       });
 
       return newState;
@@ -38,7 +40,8 @@ const loginReducer = (state = loginInitialState, action) => {
     case USER_AUTH_ERROR: {
       Object.assign(newState, state, {
         error: action.payload,
-        loading: null
+        loading: null,
+        login: true
       });
 
       return newState;
@@ -53,7 +56,8 @@ const loginReducer = (state = loginInitialState, action) => {
     case USER_SIGNUP_SUCCESS: {
       Object.assign(newState, state, {
         user: action.payload,
-        loading: null
+        loading: null,
+        login: true
       });
 
       return newState;
